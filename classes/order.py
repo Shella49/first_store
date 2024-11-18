@@ -14,11 +14,11 @@ class Order:
         self.products = products     
         Order._total_order += 1
         Order._total_sum += self.total_price()
-       
-                   
+                       
     @classmethod
     def total_orders(cls):
         return cls._total_order
+    
     @classmethod
     def total_orders_sum(cls):
         return cls._total_sum

@@ -3,7 +3,9 @@ from classes.order import Order
 from classes.customer import Customer
 from classes.discount import Discount
 from classes.product import Product
-
+#Создаем скидки на товары
+discount_Samsung = Discount('Samsung', 10)
+discount_ALL = Discount('', 5)
 #Создаем продукты
 product1 = Product("JVC", 1500)
 product2 = Product("Samsung",2000)

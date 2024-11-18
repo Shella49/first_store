@@ -12,5 +12,7 @@ class Discount:
         return f'Dicount {self.description} is {self.discount_percent} percents'
         
     @staticmethod
-    def discount(price,discount_percent):
+    def discount_all(price,discount_percent):
+        return price * (1 - discount_percent / 100)
+    def discount_samsung(price,discount_percent):
         return price * (1 - discount_percent / 100)
