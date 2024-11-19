@@ -4,8 +4,8 @@ from classes.customer import Customer
 from classes.discount import Discount
 from classes.product import Product
 #Создаем скидки на товары
-discount_Samsung = Discount('Samsung', 10)
-discount_ALL = Discount('', 5)
+discount_ALL = Discount(5)
+discount_15 = Discount(15)
 #Создаем продукты
 product1 = Product("JVC", 1500)
 product2 = Product("Samsung",2000)
@@ -13,17 +13,9 @@ product3 = Product("LG", 1200)
 product4 = Product("Sony",5000)
 
 #Создаем клиента
-customer1 = Customer('Ivanov',orders=[])
-customer2 = Customer('Maksimov',orders=[])
-customer3 = Customer('Smirnova',orders=[])
-
-#Создаем заказы
-#orders1 = Order([product1, product2])
-customer1.orders = Order([product1, product2])
-#orders2 = Order([product2, product4])
-customer2.orders = Order([product2, product4])
-#orders3 = Order([product3, product1, product4])
-customer3.orders = Order([product3, product1, product4])
+customer1 = Customer('Ivanov',Order([product1, product2], [5]))
+customer2 = Customer('Maksimov',Order([product4],[5]))
+customer3 = Customer('Smirnova',Order([product3, product1, product4],[5, 15]))
 
 #Общее количество заказов
 print(f"Total orders: {Order.total_orders()}")

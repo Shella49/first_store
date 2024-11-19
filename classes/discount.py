@@ -4,15 +4,10 @@ class Discount:
     description - описание скидки
     discount_percent - поцент скидки
     '''
-    def __init__(self,description: str,discount_percent: int):
-        self.description = str
+    def __init__(self,discount_percent: int):
         self.discount_percent = discount_percent
         
     def __str__(self):
-        return f'Dicount {self.description} is {self.discount_percent} percents'
+        return f'Dicount is {self.discount_percent} percents'
+    
         
-    @staticmethod
-    def discount_all(price,discount_percent):
-        return price * (1 - discount_percent / 100)
-    def discount_samsung(price,discount_percent):
-        return price * (1 - discount_percent / 100)
